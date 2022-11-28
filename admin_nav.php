@@ -43,6 +43,11 @@
              <li class="nav-item">
                 <a class="nav-link" href="anmeldung.php">Anmeldung</a>
             </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="news.php">News</a>
+            </li>
+
             <?php
             include("dropdown.php");
 

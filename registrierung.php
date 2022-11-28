@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pw2 = $_POST["password2"];
     $error = "Die Passwörter stimmen nicht überein";
 
-    $usernames = array("Nazia1", "M_Maria", "Franz");
+    $usernames = array("user", "admin");
 
     $usernames_length = count($usernames);
 
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 include ("adapt_nav.php"); 
 ?>
            
-      
+     
 
 <body>
     <div class="container">
@@ -86,10 +86,12 @@ include ("adapt_nav.php");
                 <h1>Registrierung</h1>
             </div>
         </div>
-        <form method="post">
-
+    
             <!--- Anrede !--->
+            <form>
+                <form method="POST">
 
+           
             <div class="form-floating mb-3">
                 <label for="salutation"></label>
                 <!--- Ich wusste nicht, wie ich das anders machen soll --->
@@ -110,6 +112,7 @@ include ("adapt_nav.php");
                 <input type="text" class="form-control <?php if ($errors['ln']) echo 'is-invalid'; ?>" name="ln" id="ln" placeholder="Mustermann">
                 <label for="ln">Nachname</label>
             </div>
+         
 
 
             <!--- Email - Adresse  !--->
@@ -133,6 +136,7 @@ include ("adapt_nav.php");
                                         break;
                                     } else {
                                         $usernames[] = $uname;
+                                       
                                     }
                                 }
                             }
@@ -166,17 +170,26 @@ include ("adapt_nav.php");
                 <input type="password" class="form-control <?php if ($errors['password2']) echo 'is-invalid'; ?>" name="password2" id="password2">
                 <label for="password2">Bitte Passwort erneut angeben</label>
             </div>
-
+                
+            <?php 
+            if(isset($pw1)&&isset($pw2)){
+            if($pw1!==$pw2){
+                ?> <form action="anmeldung.php" method="POST"><?php
+            }}
+            ?>
             <!--- AGB Button--->
             <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input <?php if ($errors['agree']) echo 'is-invalid'; ?>" name="agree" id="agree">
                 <label class="form-check-label" for="agree">Hiermit bestätige ich die AGB's gelesen und verstanden zu haben.</label>
             </div>
+           
             <button class="btn btn-primary" type="submit">Submit</button>
+          
         </form>
     </div>
-
+   
 
 </body>
-
+                                                                                        
 </html>
+                                                                                        

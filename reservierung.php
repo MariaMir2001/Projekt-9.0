@@ -39,14 +39,14 @@ include ("adapt_nav.php");
   
 <?php
     if (isset($_SESSION["name"])) {
-        if(isset($_SESSION["password1"])){
+        if(isset($_SESSION["password"])){
        
       echo "Du befindest dich in der Session vom User.";
         }
     }
 
     if (isset($_SESSION["nameadmin"])) {
-        if(isset($_SESSION["password1"])){
+        if(isset($_SESSION["password"])){
        
       echo "Du befindest dich in der Session vom Admin.";
         }

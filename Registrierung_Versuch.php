@@ -22,6 +22,8 @@ include ("adapt_nav.php");
 ?>
 
 
+
+
  <!-- Text --->
  <h1> News Beiträge</h1>
 

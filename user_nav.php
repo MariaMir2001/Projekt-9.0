@@ -50,11 +50,12 @@
 
 
             <?php
-            include("dropdown.php");
-            
-            session_destroy();
 
-            ?>
+            include("dropdown.php");
+       
+            
+           
+    ?>
 
 
 

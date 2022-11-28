@@ -21,6 +21,7 @@ session_start();
 <?php include "adapt_nav.php" ?> 
     
 </body>
+
 </html>
 
 <pre><?php
@@ -31,8 +32,9 @@ var_dump($_FILES);
 
 if (!empty($_FILES['image'])) {
     $tmpName = $_FILES['image']['tmp_name'];
-    move_uploaded_file($tmpName, __DIR__ . '//bilder/'. uniqid('', true) .'.jpg');
-    move_uploaded_file($tmpName, __DIR__ . '/bilder/newslettertest.jpg');
+    move_uploaded_file($tmpName, __DIR__ . '//bilder/'. time() .'.jpg');
+    move_uploaded_file($tmpName, __DIR__ . '//bilder/newslettertest.jpg');
+    move_uploaded_file($tmpName,"news.php");
     @chmod(__DIR__ . '/newslettertest.jpg', 0777);
    
     @chmod(__DIR__ . '//bilder/'. uniqid('', true) .'.jpg',0777);
@@ -71,5 +73,7 @@ if (!empty($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
     @chmod(__DIR__ . '/' . $_FILES['image']['name'], 0777);
     var_dump("Es wurde eine Datei übertragen.");
 }
+
+
 
 ?>

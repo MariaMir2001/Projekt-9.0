@@ -136,7 +136,7 @@ include ("adapt_nav.php");
         </div>
 
         <?php if (!isset($_SESSION["name"]) && !isset($_SESSION["nameadmin"]) )  //wenn man den sich eingeloggt hat als user/admin...
-              {if(!isset($_SESSION["password1"]) && !isset($_SESSION["password1"])  ){
+              {if(!isset($_SESSION["password"]) && !isset($_SESSION["passwordadmin"])  ){
              ?>
         <form method="post">
 

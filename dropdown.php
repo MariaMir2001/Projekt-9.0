@@ -5,12 +5,17 @@
    &&  isset($_POST["logout"])=== true ){
 
 
-session_destroy();
- header("Startseite.php");
- // die(); 
-    }
-
 ?>
+<form>
+<form action="startseite.php" method="POST"> 
+ <?php 
+
+ if(isset($_SESSION)){
+ session_destroy();
+ die(); }
+    }?>
+
+  </form>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +34,7 @@ session_destroy();
   
 
 
-<?php if (isset($_SESSION["nameadmin"])){ ?>
+
   <form action = "startseite.php" method = "POST" >
   <div class="container-fluid">
     
@@ -58,10 +63,6 @@ session_destroy();
   </div>
 </nav>
 
-<?php } else { 
-  session_destroy(); 
-}
-?>
 
 </body>
 </html>

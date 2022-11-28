@@ -1,6 +1,6 @@
 <?php
 // Datei und Faktor der Größenänderung
-$filename = 'beispiel.jpg';
+$filename = $tmpName, __DIR__ . '//bilder/'. uniqid('', true) .'.jpg';
 $percent = 0.5;
 
 // Typ der Ausgabe

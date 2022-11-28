@@ -11,7 +11,7 @@ echo '<hr>';
 echo '<h4> my Array 2 example </h4>';
 
 $mySecondArray = Array(""); 
-*/
+*/session_start();
 ?>
 
 
